@@ -1,0 +1,80 @@
+/*@media only screen and (max-width: 480px) {
+	.twelve-s { width: 100%; }
+}
+
+@media only screen and (min-width: 481px) {
+	.eight-m { width: 66.66666666%; }
+	.seven-m { width: 58.33333333%; }
+	.five-m { width: 41.66666666%; }
+	.four-m { width: 33.33333333%; }
+}
+
+@media only screen and (min-width: 1024px) {
+	.eight-l { width: 66.66666666%; }
+	.four-l { width: 33.33333333%; }
+}*/
+
+body{
+  font-size: 1em;
+  font-family: helvetica;
+}
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+h3{
+  font-size: 1.25rem;
+}
+
+#projectsApp{
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.header{
+  background-color: #2cb1a0;
+	padding: 15px 10px;
+	font-weight: lighter;
+  text-align: center;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:5px;
+  margin-bottom:5px;
+  width:140px;
+  text-align: center;
+}
+
+button{
+  font-size: 14px;
+  padding: 5px;
+}
+
+.movieinfo{
+  text-align: center;
+  display:inline-block;
+  vertical-align: top;
+  width:350px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #dadada;
+  box-shadow: 2px 2px 15px 0px #888888;
+}
+.movieinfo p{
+  margin: 0px auto;
+}
+
+.box{
+  display:inline-block;
+  margin:50px;
+}
+.bold{
+  font-weight: bold;
+}
+
+/*flexbox*/

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LCR Coding Exercise</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  </head>
+  <body ng-app="myApp">
+    <div id="projectsApp">
+      <div class="header">
+        <h1 class="bold">List of Breakdowns</h1>
+      </div>
+      <div ng-controller="projectsController">
+        <div class="box" ng-repeat="project in projects | orderBy: '-added' ">
+          <div class="movieinfo">
+            <h2>{{ project.title }}</h2>
+            <h3>{{ project.type }}</h3>
+              <p><span class="bold">Casting Director:</span> {{ project.castingDirector }}</p>
+              <p><span class="bold">Start Date:</span> {{ project.startDate | date:"MM/dd/yyyy 'at' h:mma" }}</p>
+              <p><span class="bold">Added:</span> {{ project.added | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+              <div class="btn">
+                <button ng-click="removeInterest(project.title)" ng-show="interests.hasOwnProperty(project.title)" >I'm Interested</button>
+                <button ng-click="addInterest(project.title)" ng-hide="interests.hasOwnProperty(project.title)" >I'm Not Interested</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="/js/controller.js"></script>
+</html>
